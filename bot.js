@@ -2,7 +2,7 @@ const { Client, Intents } = require('discord.js');
 const puppeteer = require('puppeteer');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
-client.login("ODk3MTY4MTA5Mzk4NTQwMzQ4.YWRu6Q.W_SgrUJLVp1nB8oT8-eIwYlrdXw");
+client.login("ODk3MTY4MTA5Mzk4NTQwMzQ4.YWRu6Q.W_SgrUJLVp1nB8oT8-eIwYlrdXw")
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
