@@ -60,7 +60,9 @@ client.on('message', msg => {
       if (msg.content === '?status') {
         msg.channel.send('Czekaj');
         (async () => {
-          const browser = await puppeteer.launch({ headless: true });
+          const browser = await puppeteer.launch({
+           ignoreDefaultArgs: ['--disable-extensions'],
+          });
           const page = await browser.newPage();
           await page.goto('https://craftserve.pl/login');
           await page.type('input[name=email]', 'hojowie@gmail.com', {delay: 20})
