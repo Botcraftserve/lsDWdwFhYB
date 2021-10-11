@@ -61,6 +61,7 @@ client.on('message', msg => {
         msg.channel.send('Czekaj');
         (async () => {
           const browser = puppeteer.launch({ args: ['--no-sandbox'] });
+          const browser = await run();
           const page = await browser.newPage();
           await page.goto('https://craftserve.pl/login');
           await page.type('input[name=email]', 'hojowie@gmail.com', {delay: 20})
